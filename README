@@ -1,0 +1,66 @@
+# SIT315 Module 1 – Interrupt-Based Sense–Think–Act System
+
+## Project Overview
+
+This project demonstrates an interrupt-based embedded system developed using an Arduino Uno in the Wokwi simulator. The system follows the Sense–Think–Act model and uses multiple interrupt techniques to respond to real-time events. The project was completed as part of the SIT315 Module 1 assessment.
+
+## Features
+
+- External Interrupt using `attachInterrupt()` on pin D2
+- Pin Change Interrupts (PCI) on pins D8 and D9
+- Timer1 Interrupt generating a heartbeat every second
+- Sense–Think–Act decision-making model
+- Alarm LED control based on sensor conditions
+- Real-time Serial Monitor output
+- Event-driven programming using Interrupt Service Routines (ISRs)
+
+## Hardware / Components
+
+- Arduino Uno
+- 3 Push Buttons
+  - Door Sensor (D2)
+  - Window Sensor (D8)
+  - Emergency Sensor (D9)
+- Red LED
+- 220Ω Resistor
+- Wokwi Arduino Simulator
+
+## System Logic
+
+### Sense
+The Arduino monitors three push buttons using interrupt-based programming. The door sensor uses an external interrupt, while the window and emergency sensors use pin change interrupts. Timer1 generates a periodic interrupt every second.
+
+### Think
+The program checks the current sensor states and decides whether the system is safe or if the alarm should be activated.
+
+### Act
+The alarm LED turns ON during emergency conditions or when required by the system logic. The Serial Monitor displays the current system status and interrupt events.
+
+## Project Files
+
+- `sketch.ino` – Main Arduino program
+- `diagram.json` – Wokwi circuit diagram
+- `Task M1QP - Comprehensive Interrupt-Based Sense-Think-Act System.pdf` – Project report
+
+## Testing
+
+The following functions were successfully tested:
+
+- Door sensor external interrupt
+- Window pin change interrupt
+- Emergency pin change interrupt
+- Timer1 heartbeat interrupt
+- Alarm LED operation
+- Serial Monitor output
+
+## Simulation
+
+The project was developed and tested using the **Wokwi Arduino Simulator**.
+
+## Author
+
+**Garv Kohli**
+
+SIT315 – Real-Time and Embedded Systems
+
+Deakin University
