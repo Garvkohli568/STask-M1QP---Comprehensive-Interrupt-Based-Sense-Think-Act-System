@@ -1,0 +1,146 @@
+{
+  "version": 1,
+  "author": "Garv Kohli",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-arduino-uno",
+      "id": "uno",
+      "top": 110,
+      "left": 240,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btnDoor",
+      "top": 20,
+      "left": 20,
+      "attrs": {
+        "color": "green",
+        "label": "Door D2"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btnWindow",
+      "top": 120,
+      "left": 20,
+      "attrs": {
+        "color": "blue",
+        "label": "Window D8"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btnEmergency",
+      "top": 220,
+      "left": 20,
+      "attrs": {
+        "color": "red",
+        "label": "Emergency D9"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "ledAlarm",
+      "top": 20,
+      "left": 180,
+      "attrs": {
+        "color": "red",
+        "label": "Alarm LED"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 20,
+      "left": 300,
+      "attrs": {
+        "value": "220"
+      }
+    }
+  ],
+  "connections": [
+    [
+      "btnDoor:1.l",
+      "uno:2",
+      "green",
+      [
+        "h120",
+        "v80"
+      ]
+    ],
+    [
+      "btnDoor:2.l",
+      "uno:GND.1",
+      "black",
+      [
+        "h80",
+        "v260"
+      ]
+    ],
+    [
+      "btnWindow:1.l",
+      "uno:8",
+      "blue",
+      [
+        "h160",
+        "v-20"
+      ]
+    ],
+    [
+      "btnWindow:2.l",
+      "uno:GND.1",
+      "black",
+      [
+        "h90",
+        "v170"
+      ]
+    ],
+    [
+      "btnEmergency:1.l",
+      "uno:9",
+      "red",
+      [
+        "h190",
+        "v-120"
+      ]
+    ],
+    [
+      "btnEmergency:2.l",
+      "uno:GND.1",
+      "black",
+      [
+        "h100",
+        "v70"
+      ]
+    ],
+    [
+      "uno:5",
+      "ledAlarm:A",
+      "red",
+      [
+        "v-80",
+        "h-140"
+      ]
+    ],
+    [
+      "ledAlarm:C",
+      "r1:1",
+      "black",
+      [
+        "h40"
+      ]
+    ],
+    [
+      "r1:2",
+      "uno:GND.2",
+      "black",
+      [
+        "h60",
+        "v260"
+      ]
+    ]
+  ],
+  "dependencies": {}
+}
